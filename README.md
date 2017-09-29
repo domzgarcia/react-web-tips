@@ -39,3 +39,26 @@ var c = a.filter((val) => val !== 2)
 c // [0,1]
 a // [0,1,2]
 ```
+### Explained simple redux manifesto
+```
+import {createStore} from 'redux';
+const reducer = function(state, action){
+    let {type, payload} = action;
+    if(type === "INC"){
+        return state+=payload;
+    }
+    if(type === "DEC"){
+        return state-=payload;
+    }
+    return state;
+}
+const store = createStore(reducer, 0);
+store.subscribe( () => {
+    console.log('hey store changed', store.getState())
+});
+store.dispatch({type: "INC", payload: 1});
+store.dispatch({type: "INC", payload: 2});
+store.dispatch({type: "INC", payload: 22});
+store.dispatch({type: "INC", payload: 1});
+store.dispatch({type: "DEC", payload: 1000});
+```
