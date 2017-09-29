@@ -19,3 +19,11 @@ const containerStyle = {
 
 ### Assigning Object
 * `Object.assign $.extend _.extend _.assign`
+
+### Immutable through referencing
+```
+var a = {name:"Will"};
+var b = Object.assign({}, a, {name: "Fred"});
+b // Object {name: "Fred", age: 35}
+a // Object {name: "Will", age: 35 }
+```
