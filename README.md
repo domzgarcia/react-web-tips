@@ -20,7 +20,7 @@ const containerStyle = {
 ### Assigning Object
 * `Object.assign $.extend _.extend _.assign`
 
-### Immutable through referencing
+### Immutable through referencing in Object
 ```
 var a = {name:"Will", age: 35};
 var b = Object.assign({}, a, {name: "Fred"});
@@ -28,7 +28,7 @@ b // Object {name: "Fred", age: 35}
 a // Object {name: "Will", age: 35 }
 ```
 
-### Assigning Immutable Array, 
+### Immutable through referencing in Array
 use `concat` and `filter`
 ```
 var a = [0,1,2]
