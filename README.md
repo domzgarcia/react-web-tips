@@ -60,3 +60,39 @@ store.dispatch({type: "INC", payload: 22});
 store.dispatch({type: "INC", payload: 1});
 store.dispatch({type: "DEC", payload: 1000});
 ```
+
+### Another Sample, setting your state Immutably
+```
+import {combineReducers, createStore} from 'redux';
+const userReducer = (state = {}, action) => {
+    switch(action.type){
+        case 'CHANGE_USER': 
+            state = {...state, name: action.payload}
+        break;
+        case 'CHANGE_AGE': 
+            state = {...state, age: action.payload}
+        break;
+    }
+    return state;
+};
+const tweetsReducer = (state =[], action) => {
+    let arr = [];
+    switch(action.type){
+        case 'CHANGE_USER':
+        arr = state.concat('entry');
+        break;
+    }
+    return (arr.length === 0) ? state : arr;
+};
+const reducer = combineReducers({
+    user: userReducer,
+    tweets: tweetsReducer
+});
+const store = createStore(reducer);
+store.subscribe( () => {
+    console.log('hey store changed', store.getState())
+});
+store.dispatch({type: 'CHANGE_USER', payload: 'Dom'});
+store.dispatch({type: 'CHANGE_USER', payload: 'Dom'});
+store.dispatch({type: 'CHANGE_AGE', payload: 35});
+```
