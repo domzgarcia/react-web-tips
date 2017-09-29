@@ -17,10 +17,8 @@ const containerStyle = {
 ```
 * snakeCasing is smart enough to identify "margin-top" css
 
-### Assigning Object
-* `Object.assign $.extend _.extend _.assign`
-
 ### Immutable through referencing in Object
+use `Object.assign $.extend _.extend _.assign`
 ```
 var a = {name:"Will", age: 35};
 var b = Object.assign({}, a, {name: "Fred"});
