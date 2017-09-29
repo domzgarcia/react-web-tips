@@ -1,4 +1,4 @@
-# react-web-tips
+# react-web-tips, Flux and Redux tips
 Collection of tips when developing a react website
 
 ### Navigation Tips
