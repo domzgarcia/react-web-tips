@@ -29,7 +29,6 @@ a // Object {name: "Will", age: 35 }
 ```
 
 ### Assigning Immutable Array, use 
-<br />
 `concat` and `filter`
 ```
 var a = [0,1,2]
