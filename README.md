@@ -22,7 +22,7 @@ const containerStyle = {
 
 ### Immutable through referencing
 ```
-var a = {name:"Will"};
+var a = {name:"Will", age: 35};
 var b = Object.assign({}, a, {name: "Fred"});
 b // Object {name: "Fred", age: 35}
 a // Object {name: "Will", age: 35 }
