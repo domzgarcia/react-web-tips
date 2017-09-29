@@ -28,11 +28,14 @@ b // Object {name: "Fred", age: 35}
 a // Object {name: "Will", age: 35 }
 ```
 
-### Assigning Immutable Array, use 
-`concat` and `filter`
+### Assigning Immutable Array, 
+use `concat` and `filter`
 ```
 var a = [0,1,2]
 var b = a.concat(3)
 a // [0,1,2]
 b // [0,1,2,3]
+var c = a.filter((val) => val !== 2)
+c // [0,1]
+a // [0,1,2]
 ```
