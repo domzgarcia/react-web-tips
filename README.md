@@ -17,3 +17,5 @@ const containerStyle = {
 ```
 * snakeCasing is smart enough to identify "margin-top" css
 
+### Assigning Object
+* `Object.assign $.extend _.extend _.assign`
