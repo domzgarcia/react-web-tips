@@ -148,7 +148,7 @@ store.dispatch({type: 'CHANGE_USER', payload: 'Dom'});
 store.dispatch({type: 'CHANGE_AGE', payload: 35});
 store.dispatch({type: 'ERROR', payload: 35});
 ```
-### React Thunk
+### Redux Thunk
 ```
 import {applyMiddleware, createStore} from 'redux';
 import axios from 'axios';
