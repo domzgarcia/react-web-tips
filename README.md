@@ -27,7 +27,7 @@ a // Object {name: "Will", age: 35 }
 ```
 
 ### Immutable through referencing in Array
-use `concat` and `filter`
+use `concat, filter map` and `reduce`
 ```
 var a = [0,1,2]
 var b = a.concat(3)
