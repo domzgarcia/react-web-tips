@@ -235,7 +235,8 @@ store.dispatch({
 import {createStore} from 'redux';
 const initialState = {
     result: 1,
-    lastValues: []
+    lastValues: [],
+    username: "Max"
 }
 const reducer = (state = initialState, action) =>{
     
@@ -243,16 +244,20 @@ const reducer = (state = initialState, action) =>{
         case 'ADD':
             state = {
                 ...state, 
-                result: state.result + action.payload
+                result: state.result + action.payload,
+                lastValues: [...state.lastValues, action.payload] // or lastValues: state.lastValues.concat(action.payload)
             };
-            // state.result += action.payload;
+            // wrong: state.lastValues.push(action.payload);
+            // wrong: state.result += action.payload;
         break;
         case 'SUBTRACT':
             state = {
                 ...state, 
-                result: state.result - action.payload
+                result: state.result - action.payload,
+                lastValues: [...state.lastValues, action.payload] // or lastValues: state.lastValues.concat(action.payload)
             };
-            // state.result -= action.payload;
+            // wrong: state.lastValues.push(action.payload);
+            // wrong: state.result -= action.payload;
         break;
     }
     return state;
