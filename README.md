@@ -1,5 +1,5 @@
 # react-web-tips, Flux and Redux tips
-Collection of tips when developing a react website `NOT YET VISITED BY ME` [pen](https://codepen.io/ericb81/)[egg](https://egghead.io/lessons/javascript-redux-simplifying-the-arrow-functions)
+Collection of tips when developing a react website `NOT YET VISITED BY ME` [pen](https://codepen.io/ericb81/) [egg](https://egghead.io/lessons/javascript-redux-simplifying-the-arrow-functions) [dan](https://egghead.io/instructors/dan-abramov)
 
 ### Navigation Tips
 * use through history `let {history} = this.props; history.isActive('home') // true or false`
