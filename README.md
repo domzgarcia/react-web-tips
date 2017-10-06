@@ -40,7 +40,7 @@ c // [0,1]
 a // [0,1,2]
 ```
 ### Explained simple redux manifesto
-```
+```javascript
 import {createStore} from 'redux';
 const reducer = function(state, action){
     let {type, payload} = action;
@@ -64,7 +64,7 @@ store.dispatch({type: "DEC", payload: 1000});
 ```
 
 ### Another Sample, setting your state Immutably
-```
+```javascript
 import {combineReducers, createStore} from 'redux';
 const userReducer = (state = {}, action) => {
     switch(action.type){
@@ -99,7 +99,7 @@ store.dispatch({type: 'CHANGE_USER', payload: 'Dom'});
 store.dispatch({type: 'CHANGE_AGE', payload: 35});
 ```
 ### Simple Middleware
-```
+```javascript
 import {applyMiddleware, combineReducers, createStore} from 'redux';
 const userReducer = (state = {}, action) => {
     switch(action.type){
@@ -151,7 +151,7 @@ store.dispatch({type: 'CHANGE_AGE', payload: 35});
 store.dispatch({type: 'ERROR', payload: 35});
 ```
 ### Redux Thunk
-```
+```javascript
 import {applyMiddleware, createStore} from 'redux';
 import axios from 'axios';
 import logger from 'redux-logger';
@@ -194,7 +194,7 @@ store.dispatch( (dispatch) => {
 });
 ```
 ### Redux Promise
-```
+```javascript
 import {applyMiddleware, createStore} from 'redux';
 import axios from 'axios';
 import logger from 'redux-logger';
@@ -233,7 +233,7 @@ store.dispatch({
 });
 ```
 ### Changing Values with DOT (.) notation
-```
+```javascript
 import {createStore} from 'redux';
 const initialState = {
     result: 1,
@@ -273,7 +273,7 @@ store.dispatch({type: "ADD", payload: 22});
 store.dispatch({type: "SUBTRACT", payload: 80});
 ```
 ### Custom Logger
-```
+```javascript
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 const mathReducer = (state = {
     result: 1,
@@ -333,7 +333,7 @@ store.dispatch({type: "SUBTRACT", payload: 80});
 store.dispatch({type: "SET_AGE", payload: 30});
 ```
 ### Redux Logger
-```
+```javascript
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 import logger from 'redux-logger';
 
