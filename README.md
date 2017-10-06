@@ -7,7 +7,7 @@ Collection of tips when developing a react website `NOT YET VISITED BY ME` [pen]
 * to ignore or url params or query params, enclose path attribute in your Route like this
   <br /> ex: `<Route path="archives(/:article)" name="archives" component={Archives}></Route>`
   
-![alt React Process](https://github.com/ReactTraining/react-workshop/blob/master/slides/Lifecycle.pdf)
+![alt text](https://github.com/ReactTraining/react-workshop/blob/master/slides/Lifecycle.pdf "React Process")
 
 ### Style
 * passing style to attribute style in the markup
