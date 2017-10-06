@@ -11,7 +11,7 @@ Collection of tips when developing a react website `NOT YET VISITED BY ME` [pen]
 
 ### Style
 * passing style to attribute style in the markup
-```
+```javascript
 const containerStyle = {
   marginTop: "60px"
 };
@@ -21,7 +21,7 @@ const containerStyle = {
 
 ### Immutable through referencing in Object
 use `Object.assign $.extend _.extend _.assign`
-```
+```javascript
 var a = {name:"Will", age: 35};
 var b = Object.assign({}, a, {name: "Fred"});
 b // Object {name: "Fred", age: 35}
@@ -30,7 +30,7 @@ a // Object {name: "Will", age: 35 }
 
 ### Immutable through referencing in Array
 use `concat, filter map` and `reduce`
-```
+```javascript
 var a = [0,1,2]
 var b = a.concat(3)
 a // [0,1,2]
